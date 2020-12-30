@@ -15,7 +15,9 @@
     "description": "Find out more about Swagger",
     "url": "http://swagger.io"
   },
-  "servers": [{ "url": "/api/v3" }],
+  "servers": [
+    { "url": "https://8jcspmriad.execute-api.eu-central-1.amazonaws.com/prod" }
+  ],
   "tags": [
     {
       "name": "pet",
