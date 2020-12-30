@@ -4,7 +4,7 @@ OpenApi 3 Petstore from https://petstore3.swagger.io/ saved in openapi.json
 
 # Projen
 
-[Projen](https://github.com/projen/projen) is a very cool framework to synth git files. If you want make changes to git files like .gitignore or the package.json use .projen.js and run
+[Projen](https://github.com/projen/projen) is a very cool framework to automatically synth project files. If you want make changes to git files like .gitignore or the package.json use .projen.js and run
 
 ```
 npx projen
