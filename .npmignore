@@ -14,6 +14,7 @@ dist
 /.eslintrc.json
 cdk.out/
 .cdk.staging/
+cdk.out
 !/lib
 !/lib/**/*.js
 !/lib/**/*.d.ts

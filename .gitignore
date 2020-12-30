@@ -44,6 +44,7 @@ junit.xml
 cdk.out/
 .cdk.staging/
 .parcel-cache/
+cdk.out
 !/.projen/tasks.json
 !/.projen/deps.json
 !/package.json

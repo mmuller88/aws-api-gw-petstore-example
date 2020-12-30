@@ -1,22 +1,23 @@
-import { App, Construct, Stack, StackProps } from '@aws-cdk/core';
+import * as apigw from '@aws-cdk/aws-apigateway';
+// import * as iam from '@aws-cdk/aws-iam';
+import * as core from '@aws-cdk/core';
+import { StaticSite } from './static-site';
 
-export class MyStack extends Stack {
-  constructor(scope: Construct, id: string, props: StackProps = {}) {
+export class ApiGwStack extends core.Stack {
+  constructor(scope: core.Construct, id: string, props: core.StackProps = {}) {
     super(scope, id, props);
 
-    // define resources here...
+    new apigw.SpecRestApi(this, 'SpecRestApi', {
+      restApiName: 'Petstore Example',
+      apiDefinition: apigw.ApiDefinition.fromAsset('./src/site-contents/openapi.json'),
+    });
+
+    new StaticSite(this);
   }
 }
 
-// for development, use account/region from cdk cli
-const devEnv = {
-  account: process.env.CDK_DEFAULT_ACCOUNT,
-  region: process.env.CDK_DEFAULT_REGION,
-};
+const app = new core.App();
 
-const app = new App();
-
-new MyStack(app, 'my-stack-dev', { env: devEnv });
-// new MyStack(app, 'my-stack-prod', { env: prodEnv });
+new ApiGwStack(app, 'api-gw-stack-dev');
 
 app.synth();

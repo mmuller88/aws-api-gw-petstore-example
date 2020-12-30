@@ -3,6 +3,8 @@
   "scripts": {
     "projen": "npx projen",
     "start": "npx projen start",
+    "cdkDeploy": "cdk deploy",
+    "cdkDestroy": "cdk destroy",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "test:compile": "npx projen test:compile",
@@ -20,12 +22,17 @@
     "destroy": "npx projen destroy",
     "diff": "npx projen diff"
   },
+  "author": {
+    "name": "martin.mueller",
+    "organization": false
+  },
   "devDependencies": {
+    "@mobileposse/auto-delete-bucket": "^1.55.0",
     "@types/jest": "^26.0.19",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
-    "aws-cdk": "^1.73.0",
+    "aws-cdk": "^1.80.0",
     "eslint": "^7.16.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.3.0",
@@ -40,10 +47,25 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@aws-cdk/assert": "^1.73.0",
-    "@aws-cdk/core": "^1.73.0"
+    "@aws-cdk/assert": "^1.80.0",
+    "@aws-cdk/aws-apigateway": "^1.80.0",
+    "@aws-cdk/aws-cloudfront": "^1.80.0",
+    "@aws-cdk/aws-iam": "^1.80.0",
+    "@aws-cdk/aws-route53": "^1.80.0",
+    "@aws-cdk/aws-s3": "^1.80.0",
+    "@aws-cdk/aws-s3-deployment": "^1.80.0",
+    "@aws-cdk/core": "^1.80.0",
+    "@mobileposse/auto-delete-bucket": "^1.55.0"
   },
   "bundledDependencies": [],
+  "keywords": [
+    "aws",
+    "cdk",
+    "custom-resource",
+    "parameter",
+    "sdk",
+    "ssm"
+  ],
   "license": "Apache-2.0",
   "version": "0.0.0",
   "jest": {
