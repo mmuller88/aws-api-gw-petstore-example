@@ -9,7 +9,7 @@ export class StaticSite {
   constructor(scope: Stack) {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const fs = require('fs');
-    fs.writeFileSync('src/site-content/openapi.json', openApi);
+    fs.writeFileSync('./src/site-contents/openapi.json', JSON.stringify(openApi));
     /**
      * NOTE: S3 requires bucket names to be globally unique across accounts so
      * you will need to change the bucketName to something that nobody else is
@@ -38,7 +38,7 @@ export class StaticSite {
     // Deploy site contents to S3 bucket
     // tslint:disable-next-line: no-unused-expression
     new s3deploy.BucketDeployment(scope, 'DeployWithInvalidation', {
-      sources: [s3deploy.Source.asset('src/site-contents')],
+      sources: [s3deploy.Source.asset('./src/site-contents')],
       destinationBucket: siteBucket,
     });
   }

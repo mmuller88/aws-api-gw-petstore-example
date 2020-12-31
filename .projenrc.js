@@ -9,13 +9,12 @@ const project = new AwsCdkTypeScriptApp({
   authorAddress: 'damadden88@googlemail.de',
   authorName: 'martin.mueller',
   cdkVersion: '1.80.0',
+  cdkVersionPinning: true,
   name: 'aws-api-gw-petstore-example',
   cdkDependencies: [
     '@aws-cdk/core',
     '@aws-cdk/aws-apigateway',
     '@aws-cdk/aws-iam',
-    '@aws-cdk/aws-cloudfront',
-    '@aws-cdk/aws-route53',
     '@aws-cdk/aws-s3-deployment',
     '@aws-cdk/aws-s3',
   ],
@@ -24,17 +23,15 @@ const project = new AwsCdkTypeScriptApp({
   keywords: [
     'cdk',
     'aws',
-    'ssm',
-    'parameter',
-    'custom-resource',
-    'sdk',
+    'openapi',
+    'apigateway',
   ],
 });
 
 project.setScript('cdkDeploy', 'cdk deploy');
 project.setScript('cdkDestroy', 'cdk destroy');
 
-const common_exclude = ['cdk.out'];
+const common_exclude = ['cdk.out', 'src/site-contents/openapi.json'];
 project.npmignore.exclude(...common_exclude);
 project.gitignore.exclude(...common_exclude);
 
