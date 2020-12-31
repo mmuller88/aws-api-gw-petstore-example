@@ -2,7 +2,8 @@ const { AwsCdkTypeScriptApp } = require('projen');
 
 const deps = [
   '@mobileposse/auto-delete-bucket',
-]
+  'openapi-types-aws',
+];
 
 const project = new AwsCdkTypeScriptApp({
   authorAddress: 'damadden88@googlemail.de',

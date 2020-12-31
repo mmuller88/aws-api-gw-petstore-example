@@ -58,6 +58,10 @@
       "type": "build"
     },
     {
+      "name": "openapi-types-aws",
+      "type": "build"
+    },
+    {
       "name": "projen",
       "version": "^0.12.4",
       "type": "build"
@@ -127,6 +131,10 @@
     },
     {
       "name": "@mobileposse/auto-delete-bucket",
+      "type": "runtime"
+    },
+    {
+      "name": "openapi-types-aws",
       "type": "runtime"
     }
   ],
