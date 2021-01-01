@@ -12,8 +12,8 @@ export class StaticSite {
   constructor(scope: Stack, props: StaticSiteProps) {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const fs = require('fs');
-    fs.writeFileSync('./src/site-contents/openapi-dev.json', JSON.stringify(openApi('dev')));
-    fs.writeFileSync('./src/site-contents/openapi-prod.json', JSON.stringify(openApi('prod')));
+    fs.writeFileSync('./src/site-contents/openapi-dev/openapi.json', JSON.stringify(openApi('dev')));
+    fs.writeFileSync('./src/site-contents/openapi-prod/openapi.json', JSON.stringify(openApi('prod')));
     /**
      * NOTE: S3 requires bucket names to be globally unique across accounts so
      * you will need to change the bucketName to something that nobody else is
@@ -47,7 +47,7 @@ export class StaticSite {
     });
 
     new s3deploy.BucketDeployment(scope, 'BucketDeploymentOpenApi', {
-      sources: [s3deploy.Source.asset(`./src/site-contents/openapi-${props.stage}.json`)],
+      sources: [s3deploy.Source.asset(`./src/site-contents/openapi-${props.stage}`)],
       destinationKeyPrefix: '/src/site-contents/openapi.json',
       destinationBucket: siteBucket,
     });
