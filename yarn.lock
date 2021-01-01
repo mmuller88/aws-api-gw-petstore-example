@@ -1779,10 +1779,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-cdk-staging-pipeline@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk-staging-pipeline/-/aws-cdk-staging-pipeline-0.0.1.tgz#e3850e985127ab1d4d724b64a8b168979442060d"
-  integrity sha512-H3/LIZigwVUCkG2b2bNnpVoMYoU7SPGcnQS6B5i/wVgDmLpZZ4WpW7KzmnDXRZAZ7yfpLdfUJie6oIecyxhvwA==
+aws-cdk-staging-pipeline@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/aws-cdk-staging-pipeline/-/aws-cdk-staging-pipeline-0.0.3.tgz#3bdcfda9fcb3bbcfbed08e0bfc5c3bdfbdaf6cb2"
+  integrity sha512-9tIuJr6H1XN0ZcRwEPGURmeKBd86nTl7cdIH6u+E2WkaPKdsHHgTLXLcsyGShXXUDrgWCozkjVyJoSQILqzTlQ==
   dependencies:
     "@aws-cdk/assert" "1.80.0"
     "@aws-cdk/aws-codepipeline" "1.80.0"
@@ -1822,9 +1822,9 @@ aws-cdk@1.80.0:
     yargs "^16.2.0"
 
 aws-sdk@^2.437.0, aws-sdk@^2.804.0:
-  version "2.819.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.819.0.tgz#bc2d878543cc170af2c58704422bcfc38c08dc3b"
-  integrity sha512-Eu/YVodZN6oBL5P3NtUJDeZwlV2kPEn4PKfK+5kQmQnxx1+EepP9SvYel7f7RfYi9XtzsMnUz7ms5p1DsRAa6Q==
+  version "2.820.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.820.0.tgz#03933a444fed71b86d4726e63ad80af9aba07a96"
+  integrity sha512-OwGHxprG4KX5QC+vc77Xl7RCkJdwwKYPB7Gw3odNlMfdljedw7ICBylsMSBEwi/YjwaPryKPevHdOJAHbTKvQg==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -2321,9 +2321,9 @@ concat-stream@^2.0.0:
     typedarray "^0.0.6"
 
 constructs@^3.2.0:
-  version "3.2.88"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.2.88.tgz#4591f70642d173b28a1b0ce4ad15b98c2fbb8bda"
-  integrity sha512-yCfr1CHTlm94+TTIlTly+KG4u7fmeuFhMvNUhFQcX53f0wtr+8DRrSdjSNx4zjd0+1hlweerKWHEwKMkTJrVdQ==
+  version "3.2.89"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.2.89.tgz#f2cc9525100ea6f4224f251c67026b95b589b5b6"
+  integrity sha512-b8tn6ttheQz51fnoUqLO1/ubHxH+ycnrt089BQY1b6T9QbyX1hXGeqCEiVZxBfuYUaMFg64dOdr/tHu4e+LUDw==
 
 contains-path@^0.1.0:
   version "0.1.0"
@@ -5354,9 +5354,9 @@ openapi-types-aws@^0.0.1:
     openapi3-ts "^2.0.0"
 
 openapi3-ts@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/openapi3-ts/-/openapi3-ts-2.0.0.tgz#5edc238053c8e4b1133bc7c339e574db68d92d7c"
-  integrity sha512-q4p8OX/mD7qXeDKkhdLhpEz1Zh/IxPBDWmuq7f07fQJpo7exUW20sMrHfws1xzihYPktTXVV5MDOZkG/1uguEg==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/openapi3-ts/-/openapi3-ts-2.0.1.tgz#b270aecea09e924f1886bc02a72608fca5a98d85"
+  integrity sha512-v6X3iwddhi276siej96jHGIqTx3wzVfMTmpGJEQDt7GPI7pI6sywItURLzpEci21SBRpPN/aOWSF5mVfFVNmcg==
   dependencies:
     yaml "^1.10.0"
 
@@ -5697,10 +5697,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.12.7:
-  version "0.12.7"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.12.7.tgz#bfe01bf06e575ff00bddb1c14dd13825bbbfde54"
-  integrity sha512-ldvT7715RC8t90/7/y2R1S6zfWkBZYHrpU1ZmSRirW53oyTQZLaAvdqe/JawNfcTaU+LfR1RlhRNBoyjAXbvaw==
+projen@^0.12.8:
+  version "0.12.8"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.12.8.tgz#4ddd6d3aac4c49ad0cd82dd36f825d4448d65024"
+  integrity sha512-8ItpFEJp7/DL0KkqxSC6KuNiI7OgHBAwW/pfMl8LYGNqMge5tQ2CwHTfECF1Bw6SKpYgZylUcg2XDvRvwk9gOg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.0"
@@ -6934,9 +6934,9 @@ typescript@^3.9.5:
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
 
 uglify-js@^3.1.4:
-  version "3.12.3"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.12.3.tgz#bb26c4abe0e68c55e9776bca9bed99a4df73facf"
-  integrity sha512-feZzR+kIcSVuLi3s/0x0b2Tx4Iokwqt+8PJM7yRHKuldg4MLdam4TCFeICv+lgDtuYiCtdmrtIP+uN9LWvDasw==
+  version "3.12.4"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.12.4.tgz#93de48bb76bb3ec0fc36563f871ba46e2ee5c7ee"
+  integrity sha512-L5i5jg/SHkEqzN18gQMTWsZk3KelRsfD1wUVNqtq0kzqWQqcJjyL8yc1o8hJgRrWqrAl2mUFbhfznEIoi7zi2A==
 
 union-value@^1.0.0:
   version "1.0.1"

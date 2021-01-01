@@ -28,7 +28,7 @@ new PipelineStack(stack, 'PipelineStack', {
     stage: 'prod',
   }],
   branch: 'master',
-  repositoryName: 'aws-cdk-staging-pipeline',
+  repositoryName: 'aws-api-gw-petstore-example',
   customStack: (scope, _) => {
     const apiGwStack = new ApiGwStack(scope, 'api-gw-stack-dev');
     return apiGwStack;
