@@ -1,6 +1,6 @@
 import * as core from '@aws-cdk/core';
-import { PipelineStack } from 'aws-cdk-staging-pipeline';
-// import { PipelineStack } from '../../aws-cdk-staging-pipeline/src/index';
+// import { PipelineStack } from 'aws-cdk-staging-pipeline';
+import { PipelineStack } from '../../aws-cdk-staging-pipeline/src/index';
 import { ApiGwStack } from './apigw-stack';
 
 const app = new core.App();
@@ -30,7 +30,7 @@ new PipelineStack(stack, 'PipelineStack', {
   branch: 'master',
   repositoryName: 'aws-api-gw-petstore-example',
   customStack: (scope, stageAccount) => {
-    const apiGwStack = new ApiGwStack(scope, 'api-gw-stack-dev', {
+    const apiGwStack = new ApiGwStack(scope, `api-gw-stack-${stageAccount.stage}`, {
       stage: stageAccount.stage,
     });
     return apiGwStack;
