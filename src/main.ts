@@ -35,7 +35,9 @@ new PipelineStack(app, 'petstore-pipeline', {
     });
     return apiGwStack;
   },
+  // all stages need manual approval
   manualApprovals: (_) => true,
+  // not much test magic here yet. Will soon setup some Postman integration tests Check the property for instructions!
   testCommands: (stageAccount) => [
     `echo "${stageAccount.stage} stage"`,
     `echo ${stageAccount.account.id} id + ${stageAccount.account.region} region`,
