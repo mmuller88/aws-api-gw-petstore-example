@@ -20,8 +20,8 @@ cdk.out/
 .cdk.staging/
 cdk.out
 src/site-contents/openapi.json
-src/site-content/openapi-dev
-src/site-content/openapi-prod
+src/site-contents/openapi-dev
+src/site-contents/openapi-prod
 !/lib
 !/lib/**/*.js
 !/lib/**/*.d.ts

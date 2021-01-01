@@ -42,14 +42,14 @@ export class StaticSite {
     // Deploy site contents to S3 bucket
     // tslint:disable-next-line: no-unused-expression
     new s3deploy.BucketDeployment(scope, 'BucketDeployment', {
-      sources: [s3deploy.Source.asset('./src/site-contents')],
+      sources: [s3deploy.Source.asset('./src/site-contents'), s3deploy.Source.asset(`./src/site-contents/openapi-${props.stage}`)],
       destinationBucket: siteBucket,
     });
 
-    new s3deploy.BucketDeployment(scope, 'BucketDeploymentOpenApi', {
-      sources: [s3deploy.Source.asset(`./src/site-contents/openapi-${props.stage}`)],
-      destinationKeyPrefix: '/src/site-contents/openapi.json',
-      destinationBucket: siteBucket,
-    });
+    // new s3deploy.BucketDeployment(scope, 'BucketDeploymentOpenApi', {
+    //   sources: [s3deploy.Source.asset(`./src/site-contents/openapi-${props.stage}`)],
+    //   destinationKeyPrefix: '/src/site-contents/openapi.json',
+    //   destinationBucket: siteBucket,
+    // });
   }
 }
