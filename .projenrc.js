@@ -38,7 +38,7 @@ const project = new AwsCdkTypeScriptApp({
 project.setScript('cdkDeploy', 'cdk deploy');
 project.setScript('cdkDestroy', 'cdk destroy');
 
-const common_exclude = ['cdk.out', 'src/site-contents/openapi.json'];
+const common_exclude = ['cdk.out', 'src/site-contents/openapi.json', 'src/site-content/openapi-dev', 'src/site-content/openapi-prod'];
 project.npmignore.exclude(...common_exclude);
 project.gitignore.exclude(...common_exclude);
 

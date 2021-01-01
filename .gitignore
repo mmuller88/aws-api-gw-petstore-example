@@ -46,6 +46,8 @@ cdk.out/
 .parcel-cache/
 cdk.out
 src/site-contents/openapi.json
+src/site-content/openapi-dev
+src/site-content/openapi-prod
 !/.projen/tasks.json
 !/.projen/deps.json
 !/package.json
