@@ -5,7 +5,7 @@ import { ApiGwStack } from './apigw-stack';
 
 const app = new core.App();
 
-const stack = new core.Stack(app, 'petstoreStack');
+const stack = new core.Stack(app, 'petstore-parent-stack');
 
 new PipelineStack(stack, 'PipelineStack', {
   // Account and region where the pipeline will be build
@@ -30,7 +30,7 @@ new PipelineStack(stack, 'PipelineStack', {
   branch: 'master',
   repositoryName: 'aws-api-gw-petstore-example',
   customStack: (scope, stageAccount) => {
-    const apiGwStack = new ApiGwStack(scope, `api-gw-stack-${stageAccount.stage}`, {
+    const apiGwStack = new ApiGwStack(scope, `petstore-stack-${stageAccount.stage}`, {
       stage: stageAccount.stage,
     });
     return apiGwStack;

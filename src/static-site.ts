@@ -45,11 +45,5 @@ export class StaticSite {
       sources: [s3deploy.Source.asset('./src/site-contents'), s3deploy.Source.asset(`./src/site-contents/openapi-${props.stage}`)],
       destinationBucket: siteBucket,
     });
-
-    // new s3deploy.BucketDeployment(scope, 'BucketDeploymentOpenApi', {
-    //   sources: [s3deploy.Source.asset(`./src/site-contents/openapi-${props.stage}`)],
-    //   destinationKeyPrefix: '/src/site-contents/openapi.json',
-    //   destinationBucket: siteBucket,
-    // });
   }
 }
