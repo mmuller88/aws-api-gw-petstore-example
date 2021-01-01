@@ -16,11 +16,11 @@ For deploy to AWS run:
 
 ```
 yarn install
-yarn cdkDeploy --profile X
+yarn cdkDeploy --all --profile X
 ```
 
 For destroy run:
 
 ```
-yarn cdkDestroy --profile X
+yarn cdkDestroy --all --profile X
 ```
