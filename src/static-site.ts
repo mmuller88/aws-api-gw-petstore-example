@@ -5,11 +5,14 @@ import { AutoDeleteBucket } from '@mobileposse/auto-delete-bucket';
 
 import { openApi } from './openapi';
 
+export interface StaticSiteProps {
+  readonly stage: string;
+}
 export class StaticSite {
-  constructor(scope: Stack) {
+  constructor(scope: Stack, props: StaticSiteProps) {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const fs = require('fs');
-    fs.writeFileSync('./src/site-contents/openapi.json', JSON.stringify(openApi));
+    fs.writeFileSync('./src/site-contents/openapi.json', JSON.stringify(openApi(props.stage)));
     /**
      * NOTE: S3 requires bucket names to be globally unique across accounts so
      * you will need to change the bucketName to something that nobody else is

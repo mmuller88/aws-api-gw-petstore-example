@@ -17,6 +17,8 @@ export class ApiGwStack extends CustomStack {
       apiDefinition: apigw.ApiDefinition.fromInline(openApi(props.stage)),
     });
 
-    new StaticSite(this);
+    new StaticSite(this, {
+      stage: props.stage,
+    });
   }
 }
