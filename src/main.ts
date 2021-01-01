@@ -8,6 +8,7 @@ const app = new core.App();
 const stack = new core.Stack(app, 'petstore-parent-stack');
 
 new PipelineStack(stack, 'PipelineStack', {
+  stackName: 'petstore-pipeline-stack',
   // Account and region where the pipeline will be build
   env: {
     account: '981237193288',
