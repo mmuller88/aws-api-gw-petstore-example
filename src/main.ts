@@ -1,6 +1,6 @@
 import * as core from '@aws-cdk/core';
-// import { PipelineStack } from 'aws-cdk-staging-pipeline';
-import { PipelineStack } from '../../aws-cdk-staging-pipeline/src/index';
+import { PipelineStack } from 'aws-cdk-staging-pipeline';
+// import { PipelineStack } from '../../aws-cdk-staging-pipeline/src/index';
 import { ApiGwStack } from './apigw-stack';
 
 const app = new core.App();
