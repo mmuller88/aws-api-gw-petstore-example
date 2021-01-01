@@ -4,13 +4,17 @@ import { CustomStack } from 'aws-cdk-staging-pipeline/lib/custom-stack';
 import { openApi } from './openapi';
 import { StaticSite } from './static-site';
 
+export interface ApiGwStackProps extends core.StackProps {
+  readonly stage: string;
+}
+
 export class ApiGwStack extends CustomStack {
-  constructor(scope: core.Construct, id: string, props: core.StackProps = {}) {
+  constructor(scope: core.Construct, id: string, props: ApiGwStackProps) {
     super(scope, id, props);
 
     new apigw.SpecRestApi(this, 'SpecRestApi', {
       restApiName: 'Petstore Example',
-      apiDefinition: apigw.ApiDefinition.fromInline(openApi),
+      apiDefinition: apigw.ApiDefinition.fromInline(openApi(props.stage)),
     });
 
     new StaticSite(this);

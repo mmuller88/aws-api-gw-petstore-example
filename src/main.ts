@@ -30,13 +30,9 @@ new PipelineStack(stack, 'PipelineStack', {
   branch: 'master',
   repositoryName: 'aws-api-gw-petstore-example',
   customStack: (scope, stageAccount) => {
-    // setting stage variable to turn on / off certain features. Kind of feature flags I guess.
-    if (stageAccount.stage === 'dev') {
-      process.env.STAGE = 'dev';
-    } else {
-      process.env.STAGE = 'prod';
-    }
-    const apiGwStack = new ApiGwStack(scope, 'api-gw-stack-dev');
+    const apiGwStack = new ApiGwStack(scope, 'api-gw-stack-dev', {
+      stage: stageAccount.stage,
+    });
     return apiGwStack;
   },
   manualApprovals: (_) => true,
