@@ -38,7 +38,12 @@ new PipelineStack(stack, 'PipelineStack', {
     `echo "${stageAccount.stage} stage"`,
     `echo ${stageAccount.account.id} id + ${stageAccount.account.region} region`,
   ],
-  gitHub: { owner: 'mmuller88', oauthToken: new core.SecretValue('repo-token') },
+  gitHub: {
+    owner: 'mmuller88',
+    oauthToken: core.SecretValue.secretsManager('alfcdk', {
+      jsonField: 'muller88-github-token',
+    }),
+  },
 });
 
 app.synth();
