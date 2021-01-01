@@ -31,6 +31,7 @@ new PipelineStack(stack, 'PipelineStack', {
   repositoryName: 'aws-api-gw-petstore-example',
   customStack: (scope, stageAccount) => {
     const apiGwStack = new ApiGwStack(scope, `petstore-stack-${stageAccount.stage}`, {
+      stackName: `petstore-stack-${stageAccount.stage}`,
       stage: stageAccount.stage,
     });
     return apiGwStack;
