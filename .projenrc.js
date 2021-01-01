@@ -3,6 +3,7 @@ const { AwsCdkTypeScriptApp } = require('projen');
 const deps = [
   '@mobileposse/auto-delete-bucket',
   'openapi-types-aws',
+  'aws-cdk-staging-pipeline',
 ];
 
 const project = new AwsCdkTypeScriptApp({
@@ -20,6 +21,12 @@ const project = new AwsCdkTypeScriptApp({
   ],
   deps: deps,
   devDeps: deps,
+  context: {
+    '@aws-cdk/core:enableStackNameDuplicates': true,
+    'aws-cdk:enableDiffNoFail': true,
+    '@aws-cdk/core:stackRelativeExports': true,
+    '@aws-cdk/core:newStyleStackSynthesis': true,
+  },
   keywords: [
     'cdk',
     'aws',
