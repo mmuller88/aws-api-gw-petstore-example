@@ -1779,10 +1779,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-cdk-staging-pipeline@0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/aws-cdk-staging-pipeline/-/aws-cdk-staging-pipeline-0.0.5.tgz#7d72ed98b816490e9e0c59b9f3150b68dc4c43f5"
-  integrity sha512-LEkc95cNkntUPr148xJYE1n/z2Gqlf5nghvFeynM/Yzbf9BjrI6B3nTlnch76YJrneJjZuGx59ZAgFpAmSp6Sg==
+aws-cdk-staging-pipeline@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/aws-cdk-staging-pipeline/-/aws-cdk-staging-pipeline-0.0.6.tgz#9fb20b9743029011beccf90e15ba77c61a092fb5"
+  integrity sha512-URe+ZkzWBLV0+2mv41hMc8HBHKnFPPeK3vU14ohLcb61j6wg1wVl4dATPjbElkd2OqQgbFgHp9GGGTrxoRrOCA==
   dependencies:
     "@aws-cdk/assert" "1.80.0"
     "@aws-cdk/aws-codepipeline" "1.80.0"
