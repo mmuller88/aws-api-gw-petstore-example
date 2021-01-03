@@ -1,6 +1,6 @@
 import { HttpMethods } from '@aws-cdk/aws-s3';
 import * as s3deploy from '@aws-cdk/aws-s3-deployment';
-import { CfnOutput, RemovalPolicy, Stack } from '@aws-cdk/core';
+import * as core from '@aws-cdk/core';
 import { AutoDeleteBucket } from '@mobileposse/auto-delete-bucket';
 
 import { openApi } from './openapi';
@@ -11,7 +11,7 @@ export interface StaticSiteProps {
 export class StaticSite {
   readonly openApiUrl: string;
 
-  constructor(scope: Stack, props: StaticSiteProps) {
+  constructor(scope: core.Stack, props: StaticSiteProps) {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const fs = require('fs');
     fs.writeFileSync('./src/site-contents/openapi-dev/openapi.json', JSON.stringify(openApi('dev')));
@@ -35,7 +35,7 @@ export class StaticSite {
           exposedHeaders: ['ETag', 'x-amz-meta-custom-header', 'Authorization', 'Content-Type', 'Accept'],
         },
       ],
-      removalPolicy: RemovalPolicy.DESTROY,
+      removalPolicy: core.RemovalPolicy.DESTROY,
     });
 
     this.openApiUrl = siteBucket.bucketWebsiteUrl;
