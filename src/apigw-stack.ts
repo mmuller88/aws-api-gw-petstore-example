@@ -16,13 +16,13 @@ export class ApiGwStack extends CustomStack {
       restApiName: 'Petstore Example',
       apiDefinition: apigw.ApiDefinition.fromInline(openApi(props.stage)),
     });
-    const apiGwEndpoint = new core.CfnOutput(scope, 'ApiGwEndpoint', { value: api.urlForPath() });
+    const apiGwEndpoint = new core.CfnOutput(this, 'ApiGwEndpoint', { value: api.urlForPath() });
     this.cfnOutputs.ApiGwEndpoint = apiGwEndpoint;
 
     const site = new StaticSite(this, {
       stage: props.stage,
     });
-    const openApiUrl = new core.CfnOutput(scope, 'OpenApiUrl', { value: site.openApiUrl });
+    const openApiUrl = new core.CfnOutput(this, 'OpenApiUrl', { value: site.openApiUrl });
     this.cfnOutputs.OpenApiUrl = openApiUrl;
   }
 }
