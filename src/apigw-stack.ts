@@ -19,8 +19,9 @@ export class ApiGwStack extends CustomStack {
     // new core.CfnOutput(scope, 'ApiGwEndpoint', { value: api.urlForPath() });
     this.cfnOutputs.ApiGwEndpoint = { value: api.urlForPath() };
 
-    new StaticSite(this, {
+    const site = new StaticSite(this, {
       stage: props.stage,
     });
+    this.cfnOutputs.OpenApiUrl = { value: site.openApiUrl };
   }
 }

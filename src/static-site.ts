@@ -9,6 +9,8 @@ export interface StaticSiteProps {
   readonly stage: string;
 }
 export class StaticSite {
+  readonly openApiUrl: string;
+
   constructor(scope: Stack, props: StaticSiteProps) {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const fs = require('fs');
@@ -36,7 +38,8 @@ export class StaticSite {
       removalPolicy: RemovalPolicy.DESTROY,
     });
 
-    new CfnOutput(scope, 'OpenApiUrl', { value: siteBucket.bucketWebsiteUrl });
+    this.openApiUrl = siteBucket.bucketWebsiteUrl;
+    // new CfnOutput(scope, 'OpenApiUrl', { value: siteBucket.bucketWebsiteUrl });
     // scope.cfnOutputs['OpenApiUrl'] = openApiUrl;
 
     // Deploy site contents to S3 bucket
