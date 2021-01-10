@@ -28,35 +28,37 @@
   },
   "devDependencies": {
     "@mobileposse/auto-delete-bucket": "^1.55.0",
-    "@types/jest": "^26.0.19",
+    "@types/jest": "^26.0.20",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
-    "aws-cdk": "1.80.0",
-    "aws-cdk-staging-pipeline": "0.0.22",
-    "eslint": "^7.16.0",
+    "aws-cdk": "1.83.0",
+    "aws-cdk-build-badge": "^0.0.4",
+    "aws-cdk-staging-pipeline": "^0.0.27",
+    "eslint": "^7.17.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
     "jest-junit": "^12",
-    "json-schema": "^0.2.5",
+    "json-schema": "^0.3.0",
     "openapi-types-aws": "^0.0.1",
-    "projen": "^0.12.8",
+    "projen": "^0.13.10",
     "standard-version": "^9.0.0",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.1.1",
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "@aws-cdk/assert": "1.80.0",
-    "@aws-cdk/aws-apigateway": "1.80.0",
-    "@aws-cdk/aws-iam": "1.80.0",
-    "@aws-cdk/aws-s3": "1.80.0",
-    "@aws-cdk/aws-s3-deployment": "1.80.0",
-    "@aws-cdk/core": "1.80.0",
+    "@aws-cdk/assert": "1.83.0",
+    "@aws-cdk/aws-apigateway": "1.83.0",
+    "@aws-cdk/aws-lambda-nodejs": "1.83.0",
+    "@aws-cdk/aws-s3": "1.83.0",
+    "@aws-cdk/aws-s3-deployment": "1.83.0",
+    "@aws-cdk/core": "1.83.0",
     "@mobileposse/auto-delete-bucket": "^1.55.0",
-    "aws-cdk-staging-pipeline": "0.0.22",
+    "aws-cdk-build-badge": "^0.0.4",
+    "aws-cdk-staging-pipeline": "^0.0.27",
     "openapi-types-aws": "^0.0.1"
   },
   "bundledDependencies": [],
@@ -69,8 +71,18 @@
   "license": "Apache-2.0",
   "version": "0.0.0",
   "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)+(spec|test).ts?(x)"
+    ],
     "clearMocks": true,
     "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "clover",
+      "text"
+    ],
     "coverageDirectory": "coverage",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
@@ -78,9 +90,8 @@
     "testPathIgnorePatterns": [
       "/node_modules/"
     ],
-    "testMatch": [
-      "**/__tests__/**/*.ts?(x)",
-      "**/?(*.)+(spec|test).ts?(x)"
+    "watchPathIgnorePatterns": [
+      "/node_modules/"
     ],
     "reporters": [
       "default",

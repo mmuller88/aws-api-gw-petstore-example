@@ -24,12 +24,16 @@
       "type": "build"
     },
     {
+      "name": "aws-cdk-build-badge",
+      "type": "build"
+    },
+    {
       "name": "aws-cdk-staging-pipeline",
       "type": "build"
     },
     {
       "name": "aws-cdk",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "build"
     },
     {
@@ -67,7 +71,7 @@
     },
     {
       "name": "projen",
-      "version": "^0.12.8",
+      "version": "^0.13.10",
       "type": "build"
     },
     {
@@ -90,41 +94,45 @@
     },
     {
       "name": "@aws-cdk/assert",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-apigateway",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
-      "name": "@aws-cdk/aws-iam",
-      "version": "1.80.0",
+      "name": "@aws-cdk/aws-lambda-nodejs",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-s3-deployment",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-s3",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "1.80.0",
+      "version": "1.83.0",
       "type": "runtime"
     },
     {
       "name": "@mobileposse/auto-delete-bucket",
+      "type": "runtime"
+    },
+    {
+      "name": "aws-cdk-build-badge",
       "type": "runtime"
     },
     {

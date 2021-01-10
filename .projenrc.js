@@ -4,18 +4,20 @@ const deps = [
   '@mobileposse/auto-delete-bucket',
   'openapi-types-aws',
   'aws-cdk-staging-pipeline',
+  'aws-cdk-build-badge',
 ];
 
 const project = new AwsCdkTypeScriptApp({
   authorAddress: 'damadden88@googlemail.de',
   authorName: 'martin.mueller',
-  cdkVersion: '1.80.0',
+  cdkVersion: '1.83.0',
   cdkVersionPinning: true,
   name: 'aws-api-gw-petstore-example',
   cdkDependencies: [
     '@aws-cdk/core',
     '@aws-cdk/aws-apigateway',
-    '@aws-cdk/aws-iam',
+    // '@aws-cdk/aws-iam',
+    '@aws-cdk/aws-lambda-nodejs',
     '@aws-cdk/aws-s3-deployment',
     '@aws-cdk/aws-s3',
   ],

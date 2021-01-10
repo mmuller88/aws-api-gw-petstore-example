@@ -1,11 +1,14 @@
 import * as core from '@aws-cdk/core';
+import { BuildBadge } from 'aws-cdk-build-badge';
 import { PipelineStack } from 'aws-cdk-staging-pipeline';
 // import { PipelineStack } from '../../aws-cdk-staging-pipeline/src/index';
 import { ApiGwStack } from './apigw-stack';
 
 const app = new core.App();
 
-new PipelineStack(app, 'petstore-pipeline', {
+const stack = new core.Stack(app, 'petstore-parent-stack');
+
+new PipelineStack(stack, 'petstore-pipeline', {
   stackName: 'petstore-pipeline',
   // Account and region where the pipeline will be build
   env: {
@@ -36,7 +39,7 @@ new PipelineStack(app, 'petstore-pipeline', {
     return apiGwStack;
   },
   // all stages need manual approval
-  manualApprovals: (_) => true,
+  manualApprovals: (stageAccount) => stageAccount.stage === 'prod',
   // not much test magic here yet. Will soon setup some Postman integration tests Check the property for instructions!
   testCommands: (stageAccount) => [
     `echo "${stageAccount.stage} stage"`,
@@ -49,5 +52,7 @@ new PipelineStack(app, 'petstore-pipeline', {
     }),
   },
 });
+
+new BuildBadge(stack, 'BuildBadge', { hideAccountID: 'no' });
 
 app.synth();
