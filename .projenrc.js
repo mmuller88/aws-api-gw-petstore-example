@@ -4,7 +4,7 @@ const deps = [
   '@mobileposse/auto-delete-bucket',
   'openapi-types-aws',
   'aws-cdk-staging-pipeline',
-  'aws-cdk-build-badge',
+  // 'aws-cdk-build-badge',
 ];
 
 const project = new AwsCdkTypeScriptApp({

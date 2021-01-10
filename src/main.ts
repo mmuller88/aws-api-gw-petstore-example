@@ -1,5 +1,5 @@
 import * as core from '@aws-cdk/core';
-import { BuildBadge } from 'aws-cdk-build-badge';
+// import { BuildBadge } from 'aws-cdk-build-badge';
 import { PipelineStack } from 'aws-cdk-staging-pipeline';
 // import { PipelineStack } from '../../aws-cdk-staging-pipeline/src/index';
 import { ApiGwStack } from './apigw-stack';
@@ -8,7 +8,7 @@ const app = new core.App();
 
 // const stack = new core.Stack(app, 'petstore-parent-stack');
 
-const stack = new PipelineStack(app, 'petstore-pipeline', {
+new PipelineStack(app, 'petstore-pipeline', {
   stackName: 'petstore-pipeline',
   // Account and region where the pipeline will be build
   env: {
@@ -31,6 +31,7 @@ const stack = new PipelineStack(app, 'petstore-pipeline', {
   }],
   branch: 'master',
   repositoryName: 'aws-api-gw-petstore-example',
+  badges: { synthBadge: true },
   customStack: (scope, stageAccount) => {
     const apiGwStack = new ApiGwStack(scope, `petstore-stack-${stageAccount.stage}`, {
       stackName: `petstore-stack-${stageAccount.stage}`,
@@ -53,6 +54,6 @@ const stack = new PipelineStack(app, 'petstore-pipeline', {
   },
 });
 
-new BuildBadge(stack, 'BuildBadge', { hideAccountID: 'no' });
+// new BuildBadge(stack, 'BuildBadge', { hideAccountID: 'no' });
 
 app.synth();

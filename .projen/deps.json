@@ -24,10 +24,6 @@
       "type": "build"
     },
     {
-      "name": "aws-cdk-build-badge",
-      "type": "build"
-    },
-    {
       "name": "aws-cdk-staging-pipeline",
       "type": "build"
     },
@@ -71,7 +67,7 @@
     },
     {
       "name": "projen",
-      "version": "^0.13.10",
+      "version": "^0.13.13",
       "type": "build"
     },
     {
@@ -129,10 +125,6 @@
     },
     {
       "name": "@mobileposse/auto-delete-bucket",
-      "type": "runtime"
-    },
-    {
-      "name": "aws-cdk-build-badge",
       "type": "runtime"
     },
     {
