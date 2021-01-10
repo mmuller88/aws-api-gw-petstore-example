@@ -6,9 +6,9 @@ import { ApiGwStack } from './apigw-stack';
 
 const app = new core.App();
 
-const stack = new core.Stack(app, 'petstore-parent-stack');
+// const stack = new core.Stack(app, 'petstore-parent-stack');
 
-new PipelineStack(stack, 'petstore-pipeline', {
+const stack = new PipelineStack(app, 'petstore-pipeline', {
   stackName: 'petstore-pipeline',
   // Account and region where the pipeline will be build
   env: {

@@ -1,10 +1,10 @@
-synth: [![Synth](https://eg5eeauw7k.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineBuildSynthCdkBuildP-PKJQr5O4bxOH)](https://eg5eeauw7k.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=PipelineBuildSynthCdkBuildP-PKJQr5O4bxOH)
+synth: [![Synth](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineBuildSynthCdkBuildP-PKJQr5O4bxOH)](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=PipelineBuildSynthCdkBuildP-PKJQr5O4bxOH)
 
-update pipeline: [![Synth](https://eg5eeauw7k.execute-api.eu-central-1.amazonaws.com/prod/?projectName=CdkPipelineUpdatePipelineSe-KkpmmB0Vlo0R)](https://eg5eeauw7k.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=CdkPipelineUpdatePipelineSe-KkpmmB0Vlo0R)
+update pipeline: [![Synth](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?projectName=CdkPipelineUpdatePipelineSe-KkpmmB0Vlo0R)](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=CdkPipelineUpdatePipelineSe-KkpmmB0Vlo0R)
 
-dev Tests: [![Dev Integration Tests](https://eg5eeauw7k.execute-api.eu-central-1.amazonaws.com/prod/?projectName=Pipelinepetstorepipelinedev-H2KGS7v5V1Mf)](https://eg5eeauw7k.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=Pipelinepetstorepipelinedev-H2KGS7v5V1Mf)
+dev Tests: [![Dev Integration Tests](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?projectName=Pipelinepetstorepipelinedev-H2KGS7v5V1Mf)](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=Pipelinepetstorepipelinedev-H2KGS7v5V1Mf)
 
-prod Tests: [![Dev Integration Tests](https://eg5eeauw7k.execute-api.eu-central-1.amazonaws.com/prod/?projectName=Pipelinepetstorepipelinepro-zwmgDM9gvfVj)](https://eg5eeauw7k.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=Pipelinepetstorepipelinepro-zwmgDM9gvfVj)
+prod Tests: [![Dev Integration Tests](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?projectName=Pipelinepetstorepipelinepro-zwmgDM9gvfVj)](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=Pipelinepetstorepipelinepro-zwmgDM9gvfVj)
 
 # aws-api-gw-petstore-example
 
