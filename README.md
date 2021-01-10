@@ -1,4 +1,4 @@
-synth: [![Synth](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?projectName=PipelineBuildSynthCdkBuildP-LDAV9ZXwsKMf)](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=PipelineBuildSynthCdkBuildP-LDAV9ZXwsKMf)
+synth: [![Synth](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/)](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?url=true)
 
 update pipeline: [![Synth](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?projectName=CdkPipelineUpdatePipelineSe-JocSbggXMLxJ)](https://akrqjzmfu0.execute-api.eu-central-1.amazonaws.com/prod/?url=true&projectName=CdkPipelineUpdatePipelineSe-JocSbggXMLxJ)
 
