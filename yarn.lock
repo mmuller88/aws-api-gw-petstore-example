@@ -1464,9 +1464,9 @@
   integrity sha512-onlIwbaeqvZyniGPfdw/TEhKIh79pz66L1q06WUQqJLnAb6wbjvOtepLYTGHTqzdXgBYIE3ZdmqHDGsRsbBz7A==
 
 "@types/node@^10.17.0":
-  version "10.17.50"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.50.tgz#7a20902af591282aa9176baefc37d4372131c32d"
-  integrity sha512-vwX+/ija9xKc/z9VqMCdbf4WYcMTGsI0I/L/6shIF3qXURxZOhPQlPRHtjTpiNhAwn0paMJzlOQqw6mAGEQnTA==
+  version "10.17.52"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.52.tgz#dc960d4e256331b3c697b7a573ee98b882febee5"
+  integrity sha512-bKnO8Rcj03i6JTzweabq96k29uVNcXGB0bkwjVQTFagDgxxNged18281AZ0nTMHl+aFpPPWyPrk4Z3+NtW/z5w==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -1858,10 +1858,10 @@ aws-cdk-build-badge@^0.0.6:
     aws-sdk "^2.824.0"
     esbuild "^0"
 
-aws-cdk-staging-pipeline@0.0.29:
-  version "0.0.29"
-  resolved "https://registry.yarnpkg.com/aws-cdk-staging-pipeline/-/aws-cdk-staging-pipeline-0.0.29.tgz#809a5fc0b4e680689cc12a8de47136fff2370261"
-  integrity sha512-R0onrH+2M1N7E4l/6ztxiR+ArETaMFwzYl2kd+MFzaxLotyY6IhMXgwT2V4a66Aruci9pPW5Vj5MniEJQ8qGyA==
+aws-cdk-staging-pipeline@0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/aws-cdk-staging-pipeline/-/aws-cdk-staging-pipeline-0.0.30.tgz#b3ae5d4357e1f509d1def5438e01bd87a55b3a9b"
+  integrity sha512-EukugoiZCQFWREgEoanMYFZV2d46r99A75OzxU988okJteSTVFvi7YYpnmgzDJ19jRuiawXllihbeo+g/A4v/g==
   dependencies:
     "@aws-cdk/assert" "1.83.0"
     "@aws-cdk/aws-codepipeline" "1.83.0"
